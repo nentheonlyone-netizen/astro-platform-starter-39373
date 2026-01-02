@@ -1,0 +1,69 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="About — R & R Pressure Washing">
+    <article class="prose prose-invert max-w-4xl scroll-fade">
+        <h1 class="text-5xl font-black bg-gradient-to-r from-primary via-pink-400 to-primary bg-clip-text text-transparent mb-8">
+            About R &amp; R Pressure Washing
+        </h1>
+
+        <p class="text-lg opacity-95">
+            <strong class="text-primary">R &amp; R Pressure Washing</strong> started in Brampton, Ontario as a neighbourhood service and has expanded into a full
+            professional operation serving clients across Canada. We combine hands-on experience with modern equipment and environmentally responsible cleaning methods.
+        </p>
+
+        <h2 class="text-3xl font-bold mt-12 mb-6 scroll-fade">Our Story</h2>
+        <p class="text-base opacity-90 leading-relaxed scroll-fade">
+            What began as local driveway and siding cleanups grew into a trusted team of technicians. We invested in professional training and upgraded to
+            commercial-grade equipment, enabling us to take on larger residential and commercial projects with consistent, high-quality results.
+        </p>
+
+        <h2 class="text-3xl font-bold mt-12 mb-6 scroll-fade">Professional Tools &amp; Techniques</h2>
+        <p class="text-base opacity-90 leading-relaxed scroll-fade">
+            We use trailer-mounted hot-water systems, soft-wash setups for sensitive surfaces, surface cleaners for pavements, and high-capacity pumps for
+            larger jobs. Our solutions include eco-friendly detergents and targeted application methods so surfaces are cleaned effectively without damage.
+        </p>
+
+        <h2 class="text-3xl font-bold mt-12 mb-6 scroll-fade">Insurance &amp; Safety</h2>
+        <p class="text-base opacity-90 leading-relaxed scroll-fade">
+            Our crews are trained in safe operation and we maintain appropriate insurance for peace of mind on every job. We follow safety best practices and
+            communicate potential risks and recommended solutions before starting work.
+        </p>
+
+        <h2 class="text-3xl font-bold mt-12 mb-6 scroll-fade">Pricing &amp; Coverage</h2>
+        <p class="text-base opacity-90 leading-relaxed scroll-fade">
+            We provide transparent, no-surprise quotes and offer one-time services, seasonal cleanups, or ongoing maintenance plans. Although based in Brampton,
+            we accept jobs across provinces and coordinate travel and logistics for efficient, cost-aware service.
+        </p>
+
+        <h2 class="text-3xl font-bold mt-12 mb-6 scroll-fade">Our Commitment</h2>
+        <p class="text-base opacity-90 leading-relaxed scroll-fade">
+            Quality, safety, and customer satisfaction guide every job. We stand behind our work and aim for clear communication, punctual arrival, and lasting
+            results.
+        </p>
+
+        <p class="mt-8 scroll-fade"><a href="/contact" class="btn btn-lg">Request a Quote</a></p>
+    </article>
+
+    <script>
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            },
+            {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            }
+        );
+
+        document.querySelectorAll('.scroll-fade').forEach((el) => {
+            observer.observe(el);
+        });
+    </script>
+</Layout>
